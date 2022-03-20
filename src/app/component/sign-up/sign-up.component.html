@@ -1,0 +1,61 @@
+
+  <div class="example-container" >
+    <form action="" [formGroup]="login" class="form-control"  id="search-form">
+    
+        <mat-form-field matInput placeholder="Enter your firstName" appearance="fill" required>
+            <mat-label>Enter Your Firstname</mat-label>
+            <input type="text" formControlName="firstName" matInput placeholder="Ex: Goutham">
+      </mat-form-field>
+
+      <mat-form-field matInput placeholder="Enter your LastName" appearance="fill" required>
+        <mat-label>Enter Your Lastname</mat-label>
+        <input type="text" formControlName="lastName" matInput placeholder="Ex: Raj">
+  </mat-form-field>
+        
+      <mat-form-field matInput placeholder="Enter your Email" appearance="fill" required>
+          <mat-label>Enter Your Email</mat-label>
+          <input type="text" formControlName="email" matInput placeholder="Ex: gouthamy219@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="password">
+        <mat-label>Enter Your Password</mat-label>
+            <input matInput  formControlName="password" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button >
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a birth date" formControlName="dateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input type="name" class="name-input" id="phoneNumber" name="phoneNumber" matInput
+                formControlName="phoneNumber" placeholder=" Ex: 8105457612">
+        </mat-form-field>
+
+        <mat-form-field matInput placeholder="Enter your Address" appearance="fill" required>
+            <mat-label>Enter Your Address</mat-label>
+            <input type="text" formControlName="address" matInput placeholder="Ex: RT Nagar Bnaglore">
+      </mat-form-field>
+
+      <mat-form-field matInput placeholder="Enter your Address" appearance="fill" required>
+        <mat-label>Enter Your Role</mat-label>
+        <input type="text" formControlName="role" matInput placeholder="Admin">
+      
+  </mat-form-field>
+  <div class="btndiv"> 
+        <button mat-raised-button class="btn" id="resetbtn" (click)="onCancel()" color="warn">Cancel</button>
+        <button mat-raised-button class="btn" id="loginbtn" (click)="onSubmit()" color="primary">Sign Up</button>
+      </div> 
+      <br>
+        <!-- <a id="add-form" routerLink="/signup">Create new addressbook</a>  -->
+        <a  color="warn" routerLink="/login">Already Have Account? Login Here</a>
+    </form>
+    
+  </div>
+  

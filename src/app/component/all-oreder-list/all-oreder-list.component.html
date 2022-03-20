@@ -1,0 +1,206 @@
+  <app-header></app-header>
+
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+    </button>
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <ng-template matStepLabel>Cart</ng-template>
+        
+          <mat-card *ngFor="let book of bookDetails" class="example-card">
+            <mat-card-title-group>
+              <div  class="card_container">
+                <div class="img_card">
+                  <mat-card-title>
+                    <img mat-card-sm-image src="{{book.bookLogo}}">
+                  </mat-card-title>
+                </div>
+                <div class="title_card">
+                  <mat-card-title class="card-title" >{{book.name}}</mat-card-title>
+                  <mat-card-subtitle class="card-subtitle">{{book.author}}</mat-card-subtitle>
+                  <p><strong>Rs:{{book.price}}</strong></p>
+                </div>
+              </div>
+              <mat-card-content class="price">
+              </mat-card-content>
+              <div>
+
+                <mat-form-field class="QTY-new-field" appearance="outline">
+                  <mat-label>QTY</mat-label>
+                  <mat-select formControlName="quantity" name="quantity" id="quantity" required>
+                    <mat-option (click)="OnQTYChange(quantity,$event,book.price)" *ngFor="let quantity of quantities"
+                      [value]="quantity">{{quantity}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="warn" (click)="removebook(book.bookId)" class="remove ">Remove</button>
+              </div>
+            </mat-card-title-group>
+          </mat-card>
+
+          <div class="total-price">
+            <label id="price-label">Subtotal ( {{bookDataCount}} ) = <strong> ₹ {{totalPrice}}</strong></label>
+          </div>
+          <p>
+            {{totalprice}}
+          </p>
+          <div>
+            
+              <button mat-raised-button color="primary" class="wish-list-button" mat-button matStepperNext><strong>CONTINUE</strong></button>
+           
+          </div>
+          <!-- <div>
+            <button mat-button matStepperNext>Next</button>
+          </div> -->
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+
+          <ng-template matStepLabel>Customer Deatils</ng-template>
+          <form class="example-form">
+  
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>{{this.name}}</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>{{this.phoneNumber}}</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+            </tr></table>
+        
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Pincode</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Locality</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+            </tr></table>
+          
+            <p>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput placeholder="Ex. 100 Main St">#12th Cross RT nagar Banglore</textarea>
+              </mat-form-field>
+            </p>
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>city/town</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Landmak</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+            </tr></table>
+        
+            <div class="btn">
+              <h3>Type</h3>
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Home</mat-radio-button>
+              <mat-radio-button value="2">Work</mat-radio-button>
+              <mat-radio-button value="2">Other</mat-radio-button>
+            </mat-radio-group>
+            </div>
+           <br>
+            <button mat-raised-button color="primary" class="wish-list-buttons" mat-button matStepperNext><strong>CONTINUE</strong></button>
+          </form>
+
+          
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        
+      </mat-step>
+      <!-- <mat-step>
+        <ng-template matStepLabel>Order summery</ng-template>
+        
+        <div class="cards-Div">
+
+          <mat-card  id="cards" class="example-card">
+            <img src="../../../assets/Bookstore/Image 11/Image 11.png"  class="img" alt="" srcset="">
+            <mat-card-title class="card-title">Don't Make Me Think</mat-card-title>
+            <mat-card-subtitle class="card-subtitle">by Steve King</mat-card-subtitle>
+            <mat-card-content class="price">
+              <p>Rs. 1500</p>
+            </mat-card-content>
+            
+            <mat-card-actions class="card-actions">
+              <button mat-raised-button color="primary" class="wish-list-buttons"><strong>CHECKOUT</strong></button>
+            </mat-card-actions>
+          </mat-card>
+      
+          </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step> -->
+
+      <mat-step [stepControl]="firstFormGroup">
+        <ng-template matStepLabel>Order summery</ng-template>
+        <!-- <mat-card class="example-card">
+          <mat-card-title-group>
+            <div class="card_container">
+              <div class="img_card">
+                <mat-card-title>
+                  <img mat-card-sm-image src="../../../assets/Bookstore/Image 11/Image 11.png">
+                </mat-card-title>
+              </div>
+              <div class="title_card">
+                <mat-card-title class="card-title">Don't Make Me Think</mat-card-title>
+                <mat-card-subtitle class="card-subtitle">by Steve King</mat-card-subtitle>
+                <p><strong>Rs. 1200</strong></p>
+              </div>
+            </div>
+            <mat-card-content class="price">
+            </mat-card-content>
+          </mat-card-title-group>
+        </mat-card> -->
+
+        <mat-card *ngFor="let book of bookDetails" class="example-card">
+            <mat-card-title-group>
+              <div  class="card_container">
+                <div class="img_card">
+                  <mat-card-title>
+                    <img mat-card-sm-image src="{{book.bookLogo}}">
+                  </mat-card-title>
+                </div>
+                <div class="title_card">
+                  <mat-card-title class="card-title">{{book.name}}</mat-card-title>
+                  <mat-card-subtitle class="card-subtitle">{{book.author}}</mat-card-subtitle>
+                  <p><strong>Rs:{{book.price}}</strong></p>
+                </div>
+              </div>
+              <mat-card-content class="price">
+              </mat-card-content>
+            </mat-card-title-group>
+          </mat-card>
+
+          <div>
+            
+              <button mat-raised-button color="primary" class="wish-list-button" routerLink="/orderplaced" mat-button matStepperNext><strong>PLACE ORDER</strong></button>
+           
+          </div>
+          <!-- <div>
+            <button mat-button matStepperNext>Next</button>
+          </div> -->
+      </mat-step>
+    </mat-stepper>
+    <app-footer></app-footer>
+    
+
+    <a routerLink="/homepage" class="round">&#8249;</a>
+  <a routerLink="/orderplaced" class="next">&#8250;</a>
+
+  <mat-icon aria-hidden="false" routerLink="/homepage" class="home" aria-label="Example home icon">home</mat-icon>
+    
+
+ 
+
+  

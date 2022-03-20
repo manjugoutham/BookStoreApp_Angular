@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
+.header {
+    padding: 10px 0;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(211, 204, 204);
+    padding: 10px;
+    background-color: yellowgreen;
+    
+}
+
+#add-form{
+text-decoration: none;
+margin-top: 2%;
+
+}
+
+a{
+    margin-left: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 10px;
+    
+}
+
+.mar{
+    margin: 10px auto;
+    margin-left: 18%;
+}
+
+.btndiv{
+    
+    display: flex;
+    justify-content:space-around;
+}
+.btn {
+    width: 35%;
+    
+}
+
+.example-container{
+    
+     
+    color: #fff;background-image: url("../../../assets/Bookstore/loginimg1.jpg");  
+    background-size: 100%;
+    background-size: cover;
+    width: 50%;
+    top: 30%;
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+

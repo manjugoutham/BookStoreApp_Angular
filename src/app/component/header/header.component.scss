@@ -1,0 +1,97 @@
+.example-spacer {
+    flex: 1 1 content;
+  }
+
+  .header{
+    background-color: #A03037;
+    color: white;
+  }
+  .bookstorelogo{
+    width: 30%;
+  }
+
+  .bookstoreNavi{
+    text-decoration: none;
+    color: white;
+  }
+
+  .serchbar{
+    width: 100%;
+  }
+
+  .mat-form-field-infix.ng-tns-c74-0 {
+    width: max-content;
+  }
+
+  .serchbarDiv{
+    margin-left: 20%;
+  }
+
+  .serch-bar-field{
+    width: 100%;
+    margin-right: 150px;
+  }
+.book-icon-a{
+cursor: pointer;
+}
+  .searchlogo{
+    cursor: pointer;
+  }
+  .serch-logo-a{
+    text-decoration: none;
+    color: white;
+  }
+  .cart-icon{
+    text-decoration: none;
+    color: white;
+  }
+  .wishlist-icon{
+    text-decoration: none;
+    color: white;
+  }
+
+
+// Card-css
+
+#cards{
+    margin: 10px;
+    // width: 15%;
+    background-color: white;
+    min-width: 10%;
+    max-width: 20%;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(2, 0, 0, 0.2);
+}
+.cards-Div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-title{
+    padding-top: 20%;
+    text-align: left;
+}
+.card-subtitle{
+    text-align: left;
+}
+.price{
+    text-align: left;
+}
+
+.add-button{
+    background-color: #A03037;
+    color: white;
+    box-shadow: 0 2px 8px rgba(2, 0, 0, 0.2);
+}
+.wish-list-button{
+    background-color: whitesmoke;
+    color: black;
+}
+
+// footer
+
+.footer{
+    background-color: #2E1D1E;
+    color: white;
+    text-align: centers;
+}

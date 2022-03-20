@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="example-container">
+    <form [formGroup]="login" id="search-form">
+        <mat-accordion class="example-headers-align">
+          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title> 
+                Email address
+              </mat-panel-title>
+              <mat-panel-description>
+                Type your email address
+              </mat-panel-description>
+              <mat-icon>account_circle</mat-icon>
+            </mat-expansion-panel-header>
+            <p>Enter your user account's verified email address and we will send you a OTP (One Time Password)</p>
+            <mat-form-field id="contact" appearance="fill">
+              <mat-label>Enter email Id</mat-label>
+              <input formControlName="email" matInput placeholder="Ex. goutham.y@gmail.com">
+          </mat-form-field>
+          <button mat-button color="primary" (click)="onSendMail()" >Verify <mat-icon>send</mat-icon></button>
+          <mat-action-row>
+            <button mat-button color="primary"  (click)="onSendMail()">Next</button>
+          </mat-action-row>
+          </mat-expansion-panel>
+        
+          <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                OTP
+              </mat-panel-title>
+              <mat-panel-description>
+                Type the OTP sent to your email
+              </mat-panel-description>
+              <mat-icon>lock</mat-icon>
+            </mat-expansion-panel-header>
+            <p>OTP (One Time Password) has been sent to your email ID</p>
+            <mat-form-field id="contact" appearance="fill">
+              <mat-label>OTP</mat-label>
+              <input matInput formControlName="otp">
+          </mat-form-field>
+          <button mat-button color="primary" (click)="onVerifyOTP()" >Verify <mat-icon>send</mat-icon></button>
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+              <button mat-button color="primary" (click)="onVerifyOTP()">Next</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                New Password
+              </mat-panel-title>
+              <mat-panel-description>
+                Type your new password
+              </mat-panel-description>
+              <mat-icon>password</mat-icon>
+            </mat-expansion-panel-header>
+        
+            <mat-form-field appearance="fill" id="password">
+              <mat-label>Enter your password</mat-label>
+              <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button >
+          </mat-form-field>
+        
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <div id="loginButtonDiv">
+          <button mat-raised-button id="loginButton" (click)="onSubmit()" color="primary" >Submit <mat-icon>receipt</mat-icon></button>
+        </div>
+    </form>
+  </div>

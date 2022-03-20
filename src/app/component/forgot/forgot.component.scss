@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+form#search-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 25%;
+    padding-top: 5%;
+}
+button#loginButton {
+    width: 30%;
+}
+#newAddressBook{
+    text-decoration: none;
+    margin-top: 5%;
+    color: #008CFF;
+}
+div#loginButtonDiv {
+    margin-top: 20px;
+}

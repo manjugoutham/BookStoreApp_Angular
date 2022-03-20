@@ -1,0 +1,159 @@
+.example-spacer {
+    flex: 1 1 content;
+  }
+
+  .header{
+    background-color: #A03037;
+    color: white;
+  }
+  .bookstorelogo{
+    width: 30%;
+  }
+
+  .bookstoreNavi{
+    text-decoration: none;
+    color: white;
+  }
+
+  .serchbar{
+    width: 100%;
+  }
+
+  .mat-form-field-infix.ng-tns-c74-0 {
+    width: max-content;
+  }
+
+  .serchbarDiv{
+    margin-left: 20%;
+  }
+
+  .serch-bar-field{
+    width: 100%;
+    margin-right: 150px;
+  }
+.book-icon-a{
+cursor: pointer;
+}
+  .searchlogo{
+    cursor: pointer;
+  }
+  .serch-logo-a{
+    text-decoration: none;
+    color: white;
+  }
+  .cart-icon{
+    text-decoration: none;
+    color: white;
+  }
+  .wishlist-icon{
+    text-decoration: none;
+    color: white;
+  }
+
+
+#cards{
+    margin: 10px;
+    // width: 15%;
+    background-color: white;
+    min-width: 10%;
+    max-width: 20%;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(2, 0, 0, 0.2);
+}
+.cards-Div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-title{
+    padding-top: 20%;
+    text-align: left;
+}
+.card-subtitle{
+    text-align: left;
+}
+.price{
+    text-align: left;
+}
+
+.add-button{
+    background-color: #A03037;
+    color: white;
+    box-shadow: 0 2px 8px rgba(2, 0, 0, 0.2);
+}
+.wish-list-button{
+    background-color: whitesmoke;
+    color: black;
+}
+
+// footer
+
+.footer{
+    background-color: #2E1D1E;
+    color: white;
+    text-align: centers;
+}
+#cards{
+  margin: 20px;
+  background-color: whitesmoke;
+  min-width: 20%;
+  // max-width: 20%;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(2, 0, 0, 0.2);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.serchbarDiv {
+  margin-left: 72%;
+  flex: 1 1 content;
+}
+
+//   .serch-bar-field{
+//     width: 100%;
+//     margin-right: 150px;
+//   }
+.book-icon-a {
+  cursor: pointer;
+}
+.searchlogo {
+  cursor: pointer;
+}
+
+.serch-logo-a {
+  text-decoration: none;
+  color: #a03037;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.next {
+  background-color: #04AA6D;
+  border-radius: 50%;
+  position: absolute;
+          left: 55%;
+          top: 90%;
+          transform: translate(-50%, -50%);
+          font-size: 18px;
+
+}
+
+.round {
+  background-color: #04AA6D;
+  border-radius: 50%;
+  justify-content:space-around;
+  position: absolute;
+          left: 50%;
+          top: 90%;
+          transform: translate(-50%, -50%);
+          font-size: 18px;
+}

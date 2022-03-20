@@ -1,0 +1,69 @@
+<app-header></app-header>
+ 
+<p>
+  <mat-toolbar class="bookDataCount-Tool-bar">
+      <span id="bookDataCount" color="warn" matBadge="{{bookCount}}" matBadgeColor="warn"matBadgeOverlap="false"><strong>Books</strong></span>
+      <span class="example-spacer"></span>
+
+      <div  class="serchbarDiv">
+        <mat-form-field  [formGroup]="addBook"  class="serch-bar-field">
+            <input formControlName="author" type="tel" matInput placeholder="Search" class="serchbar"></mat-form-field>
+        </div>
+        <a class="serch-logo-a"><mat-icon class="searchlogo" (click)="OnSearch()">search</mat-icon></a>
+
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <span>Filter</span>
+          <mat-icon>filter_list</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+          <button (click)="OnSortAsc()" mat-menu-item>
+              <mat-icon>arrow_downward</mat-icon>
+              <span>Price : Low to High</span>
+          </button>
+          <button  (click)="OnSortDesc()" mat-menu-item>
+              <mat-icon >arrow_upward</mat-icon>
+              <span>Price : High to Low</span>
+          </button>
+
+         <!-- arrival book -->
+          <button (click)="OnArrivalDesc()" mat-menu-item>
+            <mat-icon>arrow_downward</mat-icon>
+            <span>Sort: New to old arrival</span>
+        </button>
+        <button  (click)="OnArrivalAsc()" mat-menu-item>
+            <mat-icon >arrow_upward</mat-icon>
+            <span>Sort: Old to new arrival</span>
+        </button>
+
+          <button (click)="OnLogOut()" mat-menu-item>
+              <mat-icon>logout</mat-icon>
+              <span>Logout</span>
+          </button>
+      </mat-menu>
+  </mat-toolbar>
+</p>
+
+<div [formGroup]="addBook" class="cards-Div"> 
+<mat-card *ngFor="let book of bookDetails" id="cards" class="example-card">
+  <img src={{book.bookLogo}} alt="" srcset="">
+  <mat-card-title class="card-title">{{book.name}}</mat-card-title>
+  <!-- <mat-card-title class="card-title">{{book.id}}</mat-card-title> -->
+  <mat-card-subtitle class="card-subtitle">{{book.author}}</mat-card-subtitle>
+  <mat-card-content class="price">
+    <p> <strong>Rs:{{book.price}}</strong></p>
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <!-- <button mat-raised-button class="btn" id="resetbtn" (click)="onCancel()" color="warn">Cancel</button> -->
+    <button mat-raised-button class="add-button" (click)="OnAddTOCart(book.bookId)"><strong>ADD TO CART</strong></button>
+    <button mat-raised-button class="wish-list-button"><strong>WISHLIST</strong></button>
+  </mat-card-actions>
+</mat-card>
+
+</div>
+
+<app-footer></app-footer>
+
+<a routerLink="/login" class="round">&#8249;</a>
+  <a routerLink="/orderlist" class="next">&#8250;</a>
+  

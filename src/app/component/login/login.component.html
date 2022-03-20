@@ -1,0 +1,39 @@
+
+
+  <div class="example-container">
+
+    <form action="" [formGroup]="login" class="form-control"  id="search-form">
+        <h3>Login</h3>
+        {{JWT_TOKEN }}
+      <mat-form-field matInput placeholder="Enter your Email" appearance="fill" required>
+          <mat-label>Enter Your Email</mat-label>
+          <input type="text" formControlName="email" matInput placeholder="Ex: gouthamy219@gmail.com">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="password">
+        <mat-label>Enter Your Password</mat-label>
+            <input matInput  formControlName="password" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button >
+        </mat-form-field>
+
+        
+
+      <!-- <mat-form-field matInput placeholder="Enter your Address" appearance="fill" required>
+        <mat-label>Enter Your Role</mat-label>
+        <input type="text" formControlName="role" matInput placeholder="Admin">
+      
+  </mat-form-field> -->
+  <div class="btndiv"> 
+        <button mat-raised-button class="btn" id="resetbtn" (click)="onCancel()" color="warn">Cancel</button>
+        <button mat-raised-button class="btn" id="loginbtn" (click)="onSubmit()" (click)="getToken()" color="primary">Login</button>
+      </div> 
+      <a routerLink="/forgotpwd">Forgot Password ?</a>
+        <!-- <a id="add-form" routerLink="/signup">Create new addressbook</a>  -->
+
+        <a routerLink="/signup">Create New Account.</a>
+    </form>
+  </div>
+  
