@@ -80,5 +80,10 @@ export class HttpService {
     getUserByToken(token:any):  Observable<any> {
       return this.httpClient.get(this.baseUrl + "order/getUserByToken/" + token);
     }
+
+    sendOrderToEmail(token:any):  Observable<any> {
+      return this.httpClient.get(this.baseUrl + "order/sendOrderEmail/" + token);
+    }
+
 }
 

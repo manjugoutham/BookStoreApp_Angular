@@ -1,18 +1,17 @@
 <app-header></app-header>
  
-<p>
   <mat-toolbar class="bookDataCount-Tool-bar">
       <span id="bookDataCount" color="warn" matBadge="{{bookCount}}" matBadgeColor="warn"matBadgeOverlap="false"><strong>Books</strong></span>
       <span class="example-spacer"></span>
 
+      
       <div  class="serchbarDiv">
         <mat-form-field  [formGroup]="addBook"  class="serch-bar-field">
             <input formControlName="author" type="tel" matInput placeholder="Search" class="serchbar"></mat-form-field>
         </div>
         <a class="serch-logo-a"><mat-icon class="searchlogo" (click)="OnSearch()">search</mat-icon></a>
-
-
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <span>Filter</span>
           <mat-icon>filter_list</mat-icon>
       </button>
@@ -41,8 +40,8 @@
               <span>Logout</span>
           </button>
       </mat-menu>
+    
   </mat-toolbar>
-</p>
 
 <div [formGroup]="addBook" class="cards-Div"> 
 <mat-card *ngFor="let book of bookDetails" id="cards" class="example-card">

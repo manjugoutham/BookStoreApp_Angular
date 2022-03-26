@@ -26,7 +26,7 @@
               <div>
 
                 <mat-form-field class="QTY-new-field" appearance="outline">
-                  <mat-label>QTY</mat-label>
+                  <mat-label>Quantity</mat-label>
                   <mat-select formControlName="quantity" name="quantity" id="quantity" required>
                     <mat-option (click)="OnQTYChange(quantity,$event,book.price)" *ngFor="let quantity of quantities"
                       [value]="quantity">{{quantity}}</mat-option>
@@ -184,7 +184,7 @@
 
           <div>
             
-              <button mat-raised-button color="primary" class="wish-list-button" routerLink="/orderplaced" mat-button matStepperNext><strong>PLACE ORDER</strong></button>
+              <button mat-raised-button color="primary" class="wish-list-button" routerLink="/orderplaced" mat-button matStepperNext (click)="sendOrderEmail()"><strong>PLACE ORDER</strong></button>
            
           </div>
           <!-- <div>

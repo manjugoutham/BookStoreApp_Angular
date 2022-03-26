@@ -81,6 +81,14 @@ export class AllOrederListComponent implements OnInit {
     });
       
     }
+
+    sendOrderEmail(){
+      this.httpService.sendOrderToEmail(this.token).subscribe(resp =>{
+      console.log(resp.data);
+        
+      })
+
+    }
   
     quantities=[1,2,3,4,5,6,7,8,9,10]
 
