@@ -34,6 +34,8 @@ body {
     flex-direction: column;
     width: 50%;
     margin-left: 25%;
+    margin-top: 30%;
+    height: 80%;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid rgb(211, 204, 204);
@@ -72,14 +74,14 @@ a{
 }
 
 .example-container{
-    
-     
     color: #fff;background-image: url("../../../assets/Bookstore/loginimg1.jpg");  
     background-size: 100%;
     background-size: cover;
     width: 50%;
-    top: 30%;
+    height: 50%;
+    top: 20%;
     margin-left: 25%;
     margin-bottom: 20px;
 }
+
 

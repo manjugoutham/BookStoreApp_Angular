@@ -1,8 +1,12 @@
 
-body {
+body,html {
     margin: 0;
+    height: 50%;
+    background-color: #942d2d;
+    overflow: hidden;
     height: 100%;
-    background-color: #f7f7f7;
+    margin: 0;
+    
 }
 
 .header {
@@ -30,12 +34,10 @@ body {
     flex-direction: column;
     width: 30%;
     margin-left: 25%;
-    margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid rgb(211, 204, 204);
     padding: 10px;
-    background-color:white;
-    margin-left: auto;
+    background-color:rgb(226, 238, 224);
     margin-right: 520px;
     
 }
@@ -51,20 +53,34 @@ margin-top: 2%;
     margin-left: 18%;
 }
 
-.btndiv{
-    
+.btndiv{ 
     display: flex;
     justify-content:space-around;
 }
 .btn {
     width: 35%;
-    
 }
 
 .example-container{
-    background-image: url("../../../assets/Bookstore/backgroundimg3.webp");
+    
     background-color: whitesmoke;
     background-size: 100%;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url("../../../assets/Bookstore/backgroundimg2");
+
 }
+
+.mat-form-field-wrapper {
+    position: relative;
+}
+
 

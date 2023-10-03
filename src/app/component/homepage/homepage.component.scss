@@ -29,7 +29,7 @@
 
   .serch-bar-field{
     width: 100%;
-    margin-right: 150px;
+    // margin-right: 150px;
   }
 .book-icon-a{
 cursor: pointer;
@@ -157,3 +157,13 @@ a:hover {
           transform: translate(-50%, -50%);
           font-size: 18px;
 }
+
+/* For smaller screens with a maximum width of 1200px */
+@media (max-width: 1200px) {
+  /* Styles for smaller screens go here */
+  body {
+    font-size: 14px;
+  }
+  /* Add other styles specific for smaller screens */
+}
+

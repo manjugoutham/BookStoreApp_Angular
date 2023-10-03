@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .welcome-container {
+    color: white;
+    background-color: #a03037;
+    padding: 100px;
+    background-image: url(../../../assets/Bookstore/backgroundima1.jpg);
+  }
+  .welcome-container-header {
+    font-size: 80px;
+    z-index: 4;
+  }
+  .welcome-container-header-TO {
+    font-size: 80px;
+    margin-right: 50%;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row-reverse;
+    z-index: 4;
+  }
+  
+  .welcome-container-header-BOOK {
+    font-size: 80px;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row-reverse;
+    z-index: 4;
+    // cursor: not-allowed;
+  }
+  
+  .button-lets{
+    transition: 0.3 ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    margin-top: 7%;
+    margin-bottom: 1%;
+    z-index: 4;
+  
+  }
+  .button-lets-start {
+    transition: 0.3 ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    // flex-direction: row-reverse;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    // margin-right: 50%;
+  
+  }
+  
+  .button-lets-start :hover {
+      transition: 0.3 ease-in-out;
+      transform: scale(1.1);
+  }
+  
+  .body-height{
+    height: 1vh;
+  }
+//   .mat-starts{
+//     // margin-top: -10px;
+//   }

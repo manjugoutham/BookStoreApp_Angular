@@ -45,7 +45,7 @@
 
 <div [formGroup]="addBook" class="cards-Div"> 
 <mat-card *ngFor="let book of bookDetails" id="cards" class="example-card">
-  <img src={{book.bookLogo}} alt="" srcset="">
+  <img class="img" src={{book.bookLogo}} alt="" srcset="" width="30%" height="30%">
   <mat-card-title class="card-title">{{book.name}}</mat-card-title>
   <!-- <mat-card-title class="card-title">{{book.id}}</mat-card-title> -->
   <mat-card-subtitle class="card-subtitle">{{book.author}}</mat-card-subtitle>
@@ -63,6 +63,6 @@
 
 <app-footer></app-footer>
 
-<a routerLink="/login" class="round">&#8249;</a>
-  <a routerLink="/orderlist" class="next">&#8250;</a>
+<!-- <a routerLink="/login" class="round">&#8249;</a>
+  <a routerLink="/orderlist" class="next">&#8250;</a> -->
   

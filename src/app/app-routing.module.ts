@@ -12,8 +12,11 @@ import {ForgotComponent} from './component/forgot/forgot.component';
 import { OrederSummaryComponent } from './component/oreder-summary/oreder-summary.component';
 import { OrderplacedComponent } from './component/orderplaced/orderplaced.component';
 
+
 const routes: Routes = [
-  { path: '', redirectTo: 'signup', pathMatch: 'full' },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: 'welcome', component: WelcomepageComponent },
+  // { path: '', redirectTo: 'signup', pathMatch: 'full' },
   { path:'homepage',component: HomepageComponent},
   { path:'signup',component: SignUpComponent},
   { path:'login',component: LoginComponent},

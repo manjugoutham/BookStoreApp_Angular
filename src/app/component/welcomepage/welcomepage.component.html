@@ -1,1 +1,11 @@
-<p>welcomepage works!</p>
+<div class="body-height">
+    <div *ngIf="text" class="welcome-container">
+        <h1 @fadeIn1 class="welcome-container-header"><strong>Welcome</strong></h1>
+        <h1 @fadeIn2 class="welcome-container-header-TO"><strong>To</strong></h1>
+        <h1 @fadeIn3 class="welcome-container-header-BOOK"><strong>Book Store</strong></h1>
+        <div class="button-lets" style="font-size: medium;" @description >Access to your Orders, Wishlist and Recommendations</div>
+        <div class="button-lets-start">
+            <button routerLink="/signup" style="background-color: blue;" @letsStarts id="button-inner" mat-raised-button color="">Let's start <mat-icon class="mat-starts"></mat-icon></button>
+        </div>
+    </div>
+</div>
